@@ -4,7 +4,28 @@ Tema do Projeto: Biblioteca
 
 Alunos: Lucas Coelho e Natan Nogueira
 
-Funcionamento do Sistema ( Backend ):
+Bibliotecas utilziadas:
+
+    FastAPI         - pip install fastapi
+    SQLAlchemy      - pip install sqlalchemy
+    Uvicorn         - pip install uvicorn
+    Starlette       - pip install starlette
+    Os              - pip install os
+    Flask           - pip install flask
+    Bs4             - pip install bs4
+
+Linguagens utilizadas:
+
+    Python
+    HTML
+    CSS
+
+Extensões:
+
+    SQLite
+    SQLite viwer
+
+Funcionamento do Sistema (Backend):
 
     O nosso projeto se baseia no uso de Python (Bibliotecas: FastAPI e SQLAlchemy) e HTML+CSS para a criação de um site de uma biblioteca qualquer, onde o acervo foi baseado em alguns livros que um dos participantes do grupo (Natan) tem em casa.
 
@@ -62,7 +83,7 @@ Funcionamento do Sistema ( Backend ):
 
     Os métodos responsáveis por criar as tabelas e inserir dados em base.db estão localizados no arquivo crud.py, na pasta CRUD. {CRUD/crud.py}.
 
-Apresentação do Sistema ( Frontend ):
+Apresentação do Sistema (Frontend):
 
     Para a utilização do sistema num site iterativo, nós utilizamos HTML+CSS para integrar a estrutura de tags e estilos para o site.
 
