@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Livros - Biblioteca
+  </title>
+  <link href="/static/css/livros.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <!--Título-->
+   <h1>
+    Biblioteca
+   </h1>
+   <nav>
+    <!--Listagem de páginas do menu-->
+    <ul>
+     <li class="nav-item">
+      <a class="nav-link" href="/">
+       Home
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="/livros">
+       Livros
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="/autores">
+       Autores
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="/cadastro">
+       Cadastro
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <!--Sessão de livros listados-->
+  <main class="main">
+   <form action="/adicionar-livro" class="form-adicionar-livro" method="post">
+    <h2>
+     Adicionar Livro
+    </h2>
+    <label class="form-label" for="nome">
+     Nome:
+    </label>
+    <input class="form-input" id="nome" name="nome" required="" type="text"/>
+    <br/>
+    <br/>
+    <label class="form-label" for="autor">
+     Autor:
+    </label>
+    <input class="form-input" id="autor" name="autor" required="" type="text"/>
+    <br/>
+    <br/>
+    <button class="form-button" type="submit">
+     Adicionar
+    </button>
+   </form>
+   <form action="/delete-article" class="form-delete-article" method="post">
+    <br/>
+    <h2>
+     Deletar Ultimo Livro
+    </h2>
+    <br/>
+    <button class="form-button" type="submit">
+     Deletar
+    </button>
+   </form>
+   <hr class="form-divider"/>
+   <section class="destaque">
+    <!--Abertura de uma sessão de livros, no caso dessa é a sessão de The Witcher. Cada Sessão tem uma saga/tema diferente-->
+    <h2 "="" class="section-title">
+     Saga The Witcher
+    </h2>
+    <!--Para adicionar um(a) tema/saga novo(a) basta seguir esses moldes-->
+    <!--Incício da Saga The Witcher-->
+    <article class="article">
+     <!--A cada <article> um livro novo é listado. Para listar um livro basta seguir os moldes desta <artilce>-->
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/TheWitcher/oultimodesejo.jpg"/>
+     <!--Tamanho padrão das imagens: height="160"-->
+     <div class="article-content">
+      <h3 class="article-title">
+       O &Uacute;ltimo Desejo | The Witcher
+      </h3>
+      <!--Título do lívro, descrição/sinopse abaixo-->
+      <p class="article-description">
+       Geralt de R&iacute;via &eacute; um bruxo sagaz e habilidoso. Um assassino impiedoso e de sangue-frio treinado, desde a inf&acirc;ncia, para ca&ccedil;ar e eliminar monstros. Seu &uacute;nico objetivo: destruir as criaturas do mal que assolam o mundo. Um mundo fant&aacute;stico criado por Sapkowski com claras influ&ecirc;ncias da mitologia eslava.
+      </p>
+      <p>
+       Autor(a): Andrzej Sapkowski
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/TheWitcher/aespadadodestino.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       A Espada Do Destino | The Witcher
+      </h3>
+      <p class="article-description">
+       Geralt de R&iacute;via &eacute; um bruxo. Um feiticeiro cheio de ast&uacute;cia. Um matador impiedoso. Um assassino de sangue-frio, treinado desde a inf&acirc;ncia para ca&ccedil;ar e eliminar monstros. Seu &uacute;nico objetivo: destruir as criaturas do mal que assolam o mundo. Um mundo fant&aacute;stico criado por Sapkowski com claras influ&ecirc;ncias da mitologia eslava. Um mundo em que nem todos os que parecem monstros s&atilde;o maus e nem todos os que parecem anjos s&atilde;o bons. A espada do destino &eacute; o segundo livro da saga do bruxo Geralt de R&iacute;via e ter&aacute; continuidade com O sangue dos elfos.
+      </p>
+      <p>
+       Autor(a): Andrzej Sapkowski
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/TheWitcher/sanguedoselfos.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Sangue Dos Elfos | The Witcher
+      </h3>
+      <p class="article-description">
+       Geralt de R&iacute;via &eacute; um bruxo sagaz e habilidoso. Um assassino impiedoso e de sangue-frio treinado, desde a inf&acirc;ncia, para ca&ccedil;ar e eliminar monstros. Seu &uacute;nico objetivo: destruir as criaturas do mal que assolam o mundo. Um mundo fant&aacute;stico criado por Sapkowski com claras influ&ecirc;ncias da mitologia eslava. Um mundo em que nem todos os que parecem monstros s&atilde;o maus e nem todos os que parecem anjos s&atilde;o bons...
+      </p>
+      <p>
+       Autor(a): Andrzej Sapkowski
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/TheWitcher/tempododesprezo.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Tempo Do Desprezo | The Witcher
+      </h3>
+      <p class="article-description">
+       Tempo do desprezo &eacute; o quarto livro da saga do bruxo Geralt de R&iacute;via. Geralt lutou contra monstros e dem&ocirc;nios por todo o pa&iacute;s, mas at&eacute; ele pode n&atilde;o estar preparado para o que est&aacute; acontecendo com seu mundo. H&aacute; intrigas, diverg&ecirc;ncias e rebeli&otilde;es por todo lado. Os Elfos e outros seres n&atilde;o humanos vivem sob repress&atilde;o h&aacute; d&eacute;cadas. Os Magos brigam uns com os outros, alguns a soldo dos reis, outros simpatizantes dos elfos. E, nesse cen&aacute;rio de medo e desprezo, Geralt e sua amante Yennefer precisam proteger Ciri, herdeira &oacute;rf&atilde; e procurada por todos os lados. Ela tem o poder de salvar o mundo ou, talvez, acabar com ele.
+      </p>
+      <p>
+       Autor(a): Andrzej Sapkowski
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/TheWitcher/batismodefogo.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Batismo De Fogo | The Witcher
+      </h3>
+      <p class="article-description">
+       Batismo de fogo &eacute; o quinto livro da saga do bruxo Geralt de R&iacute;via. A Irmandade dos Magos foi esfacelada por um golpe e Geralt ficou seriamente ferido. E agora, que tempos sombrios pairam sobre o mundo, ele n&atilde;o poder&aacute; defender os homens contra os monstros perigosos que os aterrorizam. Guerras devastam todos os territ&oacute;rios e o futuro da magia est&aacute; amea&ccedil;ado. Mas as feiticeiras que sobreviveram est&atilde;o determinadas a proteg&ecirc;-lo. &Eacute; um momento conturbado, e ainda &eacute; preciso encontrar a garota Ciri, herdeira do trono de Cintra, que desapareceu. At&eacute; que surge o rumor de que ela est&aacute; na corte de Nilfgaard e vai se casar com o imperador. Ferido ou n&atilde;o, Geralt tem uma miss&atilde;o em suas m&atilde;os. Fen&ocirc;meno liter&aacute;rio que inspirou a cria&ccedil;&atilde;o do game The Witcher.
+      </p>
+      <p>
+       Autor(a): Andrzej Sapkowski
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/TheWitcher/torredaandorinha.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Torre Da Andorinha | The Witcher
+      </h3>
+      <p class="article-description">
+       O bruxo segue em dire&ccedil;&atilde;o ao sul, convencido de que Ciri vai se casar em breve com o imperador de Nilfgaard. Os assassinos impiedosos de Nilfgaard j&aacute; est&atilde;o seguindo os rastros de Ciri, que, gravemente ferida, se recupera no casebre do eremita Vysogota, perdido no meio de um pantanal. Ser&aacute; que o bruxo conseguir&aacute; achar Ciri? Qual ser&aacute; o papel da lend&aacute;ria Torre da Andorinha?
+      </p>
+      <p>
+       Autor(a): Andrzej Sapkowski
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/TheWitcher/senhoradolago.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Senhora Do Lago | The Witcher
+      </h3>
+      <p class="article-description">
+       Enquanto Yeneffer permanece prisioneira e Geralt passa o inverno sob o charme de Fringilla, Ciri &eacute; projetada em um mundo paralelo ao penetrar na Torre da Andorinha. Agora, sob o dom&iacute;nio do elfo Avallac&rsquo;h, ela s&oacute; poder&aacute; ser livre se aceitar dar um filho ao rei dos Amieiros. A jovem conseguir&aacute; fugir para salvar seus amigos? Cansada de fugir, Ciri percebe que encarar seu destino &eacute; a &uacute;nica forma de salvar aqueles que ama. Nesse meio-tempo, a companhia de Geralt finalmente chega ao castelo de Stygga. Para proteger Ciri e Yennefer, o bruxo se v&ecirc; obrigado a enfrentar mais uma vez o terr&iacute;vel feiticeiro Vilgefortz.
+      </p>
+      <p>
+       Autor(a): Andrzej Sapkowski
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/TheWitcher/tempodetempestade.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Tempo De Tempestade | The Witcher
+      </h3>
+      <p class="article-description">
+       Geralt de R&iacute;via n&atilde;o podia imaginar o que o esperava ao chegar &agrave; cidade de Kerack. Primeiro foi acusado de malversa&ccedil;&otilde;es financeiras. Depois, misteriosamente liberado sob fian&ccedil;a. E, finalmente, descobre que suas preciosas espadas, deixadas no dep&oacute;sito da guarda da cidade, tinham desaparecido. Tudo muito suspeito, ainda mais quando a feiticeira Lytta Neyd, conhecida como Coral, pode estar por tr&aacute;s desses acasos. O bruxo se encontra, novamente, implicado em perigosos assuntos de magia e dos m&aacute;gicos. Desta vez, nem a fiel companhia do trovador Jaskier, nem a lembran&ccedil;a de sua amada Yennefer, nem sua fama como implac&aacute;vel ca&ccedil;ador de monstros podem evitar que se veja cada vez mais envolvido em uma trama obscura, onde nem todos os monstros s&atilde;o quem parecem ser.
+      </p>
+      <p>
+       Autor(a): Andrzej Sapkowski
+      </p>
+     </div>
+    </article>
+   </section>
+   <section class="destaque">
+    <h2 class="section-title">
+     Saga Harry Potter
+    </h2>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/HarryPotter/hp1.webp"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       A Pedra Filosofal | Harry Potter
+      </h3>
+      <p class="article-description">
+       Harry Potter &eacute; um garoto cujos pais, feiticeiros, foram assassinados por um poderos&iacute;ssimo bruxo quando ele ainda era um beb&ecirc;. Ele foi levado, ent&atilde;o, para a casa dos tios que nada tinham a ver com o sobrenatural. Pelo contr&aacute;rio. At&eacute; os 10 anos, Harry foi uma esp&eacute;cie de gata borralheira: maltratado pelos tios, herdava roupas velhas do primo gorducho, tinha &oacute;culos remendados e era tratado como um estorvo. No dia de seu anivers&aacute;rio de 11 anos, entretanto, ele parece deslizar por um buraco sem fundo, como o de Alice no pa&iacute;s das maravilhas, que o conduz a um mundo m&aacute;gico. Descobre sua verdadeira hist&oacute;ria e seu destino: ser um aprendiz de feiticeiro at&eacute; o dia em que ter&aacute; que enfrentar a pior for&ccedil;a do mal, o homem que assassinou seus pais.
+      </p>
+      <p>
+       Autor(a): J.K. Rowling
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/HarryPotter/hp2.webp"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       A C&acirc;mara Secreta | Harry Potter
+      </h3>
+      <p class="article-description">
+       Depois de f&eacute;rias aborrecidas na casa dos tios trouxas, est&aacute; na hora de Harry Potter voltar a estudar. Coisas acontecem, no entanto, para dificultar o regresso de Harry. Persistente e astuto, o her&oacute;i n&atilde;o se deixa intimidar pelos obst&aacute;culos e, com a ajuda dos fi&eacute;is amigos Weasley, come&ccedil;a o ano letivo na Escola de Magia e Bruxaria de Hogwarts. As novidades n&atilde;o s&atilde;o poucas. Novos colegas, novos professores, muitas e boas descobertas e um grande e perigosos desafio. Algu&eacute;m ou alguma coisa amea&ccedil;a a seguran&ccedil;a e a tranquilidade dos membros de Hogwarts.
+      </p>
+      <p>
+       Autor(a): J.K. Rowling
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/HarryPotter/hp3.webp"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       O Prisioneiro De Azkaban | Harry Potter
+      </h3>
+      <p class="article-description">
+       As aulas est&atilde;o de volta &agrave; Hogwarts e Harry Potter n&atilde;o v&ecirc; a hora de embarcar no expresso a vapor que o levar&aacute; de volta &agrave; escola de bruxaria. Mais uma vez suas f&eacute;rias na rua dos Alfeneiros foi triste e solit&aacute;ria. Com muita a&ccedil;&atilde;o, humor e magia, &acute;Harry Potter e o prisioneiro de Azkaban&acute; traz de volta o gigante atrapalhado R&uacute;beo Hagrid, o s&aacute;bio diretor Alvo Dumbledore, a exigente professora de transforma&ccedil;&atilde;o Minerva MacGonagall e o novo mestre Lupin, que guarda grandes surpresas para Harry.
+      </p>
+      <p>
+       Autor(a): J.K. Rowling
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/HarryPotter/hp4.webp"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       O C&aacute;lice De Fogo | Harry Potter
+      </h3>
+      <p class="article-description">
+       Nesta aventura, o feiticeiro cresceu e est&aacute; com 14 anos. O in&iacute;cio do ano letivo de Harry Potter reserva muitas emo&ccedil;&otilde;es, m&aacute;gicas, e acontecimentos inesperados, al&eacute;m de um novo torneio em que os alunos de Hogwarts ter&atilde;o de demonstrar todas as habilidade m&aacute;gicas e n&atilde;om&aacute;gicas que v&ecirc;m adquirindo ao longo de suas vidas. Harry &eacute; escolhido pelo C&aacute;lice de Fogo para competir como um dos campe&otilde;es de Hogwarts, tendo ao lado seus fi&eacute;is amigos. Muitos desafios, feiti&ccedil;os, po&ccedil;&otilde;es e confus&otilde;es est&atilde;o reservados para Harry. Al&eacute;m disso, ele ter&aacute; que lidar ainda com os problemas comuns da adolesc&ecirc;ncia amor, amizade, aceita&ccedil;&atilde;o e rejei&ccedil;&atilde;o.
+      </p>
+      <p>
+       Autor(a): J.K. Rowling
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/HarryPotter/hp5.webp"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       A Ordem Da Fenix | Harry Potter
+      </h3>
+      <p class="article-description">
+       Harry n&atilde;o &eacute; mais um garoto. Aos 15 anos, continua sofrendo a rejei&ccedil;&atilde;o dos Dursdley, sua estranha fam&iacute;lia no mundo dos 'trouxas'. Tamb&eacute;m continua contando com Rony Weasley e Hermione Granger, seus melhores amigos em Hogwarts, para levar adiante suas investiga&ccedil;&otilde;es e aventuras. Mas o bruxinho come&ccedil;a a sentir e descobrir coisas novas, como o primeiro amor e a sexualidade. Nos volumes anteriores, J. K. Rowling mostrou como Harry foi transformado em celebridade no mundo da magia por ter derrotado, ainda beb&ecirc;, Voldemort, o todopoderoso bruxo das trevas que assassinou seus pais. Neste quinto livro da saga, o protagonista, numa crise t&iacute;pica da adolesc&ecirc;ncia, tem ataques de mau humor com a persegui&ccedil;&atilde;o da imprensa, que o segue por todos os lugares e chega a inventar declara&ccedil;&otilde;es que nunca deu.
+      </p>
+      <p>
+       Autor(a): J.K. Rowling
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/HarryPotter/hp6.webp"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       O Enigma Do Pr&iacute;ncipe | Harry Potter
+      </h3>
+      <p class="article-description">
+       Harry Potter e o enigma do pr&iacute;ncipe' d&aacute; continuidade &agrave; saga do jovem bruxo Harry Potter a partir do ponto em que o livro anterior parou o momento em que fica provado que o poder de Voldemort e dos Comensais da Morte, seus seguidores, cresce mais a cada dia, em meio &agrave; batalha entre o bem e o mal. A onda de terror provocada pelo Lorde das Trevas estaria afetando, at&eacute; mesmo, o mundo dos trouxas (n&atilde;obruxos), e sendo agravada pela a&ccedil;&atilde;o dos dementadores, criaturas m&aacute;gicas aterrorizantes que 'sugam' a esperan&ccedil;a e a felicidade das pessoas. Harry, que acabou de completar 16 anos, parte rumo ao sexto ano na Escola de Magia e Bruxaria de Hogwarts, animado e ao mesmo tempo apreensivo com a perspectiva de ter aulas particulares com o professor Dumbledore, o diretor da escola e o bruxo mais respeitado em toda comunidade m&aacute;gica.
+      </p>
+      <p>
+       Autor(a): J.K. Rowling
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/HarryPotter/hp7.webp"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       As Rel&iacute;quias Da Morte | Harry Potter
+      </h3>
+      <p class="article-description">
+       Harry Potter e as rel&iacute;quias da morte', de J.K. Rowling, &eacute; o s&eacute;timo e &uacute;ltimo livro da s&eacute;rie. Voldemorte est&aacute; cada vez mais forte e Harry Potter precisa encontrar e aniquilar as Horcruxes para enfraquecer o lorde e poder enfrent&aacute;lo. Nessa busca desenfreada, contando apenas com os amigos Rony e Hermione, Harry descobre as Rel&iacute;quias da Morte, que ser&atilde;o &uacute;teis na batalha do bem contra o mal.
+      </p>
+      <p>
+       Autor(a): J.K. Rowling
+      </p>
+     </div>
+    </article>
+   </section>
+   <section class="destaque">
+    <h2 class="section-title">
+     Saga Percy Jackson
+    </h2>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/PercyJackson/pj1.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       O Ladr&atilde;o De Raios | Percy Jackson
+      </h3>
+      <p class="article-description">
+       Em O ladr&atilde;o de raios, Percy Jackson, um garoto de 12 anos com TDAH, descobre que os deuses do Olimpo est&atilde;o mais vivos do que nunca e que &eacute; filho de Poseidon, o Senhor do Mar. O semideus segue em uma miss&atilde;o para encontrar quem roubou o raio-mestre de Zeus. Com a ajuda do s&aacute;tiro Grover e de Annabeth, filha de Atena, Percy cruza os Estados Unidos para capturar o ladr&atilde;o e evitar uma guerra no Olimpo.
+      </p>
+      <p>
+       Autor(a): Rick Riordan
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/PercyJackson/pj2.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       O Mar De Monstros | Percy Jackson
+      </h3>
+      <p class="article-description">
+       Na sequ&ecirc;ncia, O Mar de Monstros, o Acampamento Meio-Sangue est&aacute; em perigo, e a &uacute;nica coisa capaz de salv&aacute;-lo &eacute; o Velocino de Ouro. Nossos her&oacute;is partem em uma arriscada e incr&iacute;vel viagem pelo Mar de Monstros, onde enfrentar&atilde;o seres fant&aacute;sticos, muitos perigos e situa&ccedil;&otilde;es inusitadas.
+      </p>
+      <p>
+       Autor(a): Rick Riordan
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/PercyJackson/pj3.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       A Maldi&ccedil;&atilde;o Do Tit&atilde; | Percy Jackson
+      </h3>
+      <p class="article-description">
+       Em A maldi&ccedil;&atilde;o do tit&atilde;, terceiro volume da s&eacute;rie, um chamado do amigo Grover deixa Percy a postos para mais uma miss&atilde;o: dois novos semideuses foram encontrados, e sua ascend&ecirc;ncia ainda &eacute; desconhecida. Cronos, o Senhor dos Tit&atilde;s, arquitetou um de seus planos mais trai&ccedil;oeiros.
+      </p>
+      <p>
+       Autor(a): Rick Riordan
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/PercyJackson/pj4.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       A Batalha Do Labirinto | Percy Jackson
+      </h3>
+      <p class="article-description">
+       No quarto livro, A batalha do Labirinto, para impedir o ataque de Cronos ao acampamento, Percy e seus amigos seguem pelo Labirinto de D&eacute;dalo, um intermin&aacute;vel universo subterr&acirc;neo que, a cada curva, revela as mais tem&iacute;veis surpresas.
+      </p>
+      <p>
+       Autor(a): Rick Riordan
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/PercyJackson/pj5.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       O &Uacute;ltimo Olimpiano | Percy Jackson
+      </h3>
+      <p class="article-description">
+       Os semideuses sabem que suas chances de vit&oacute;ria s&atilde;o pequenas, e em O &uacute;ltimo olimpiano, quinto livro da s&eacute;rie, o acirrado combate que pode acarretar o fim da civiliza&ccedil;&atilde;o ocidental ganha as ruas de Manhattan. Agora, apenas Percy Jackson e seu ex&eacute;rcito de her&oacute;is podem deter o Senhor do Tempo.
+      </p>
+      <p>
+       Autor(a): Rick Riordan
+      </p>
+     </div>
+    </article>
+   </section>
+   <section class="destaque">
+    <h2 class="section-title">
+     Saga De Livros Tolkien
+    </h2>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Tolkien/SA1.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       A Sociedade Do Ael | O Senhor Dos An&eacute;is
+      </h3>
+      <p class="article-description">
+       A Sociedade do Anel come&ccedil;a no Condado, a regi&atilde;o rural do oeste da Terra-m&eacute;dia onde vivem os diminutos e pacatos hobbits. Bilbo Bolseiro, um dos raros aventureiros desse povo, cujas perip&eacute;cias foram contadas em O Hobbit, resolve ir embora do Condado e deixa sua consider&aacute;vel heran&ccedil;a nas m&atilde;os de seu jovem parente Frodo.
+      </p>
+      <p>
+       Autor(a): John Ronald Reuel Tolkien
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Tolkien/SA2.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       As Duas Torres | O Senhor Dos An&eacute;is
+      </h3>
+      <p class="article-description">
+       Um ataque-surpresa p&ocirc;s fim &agrave; jornada conjunta da Sociedade do Anel. De um lado, o trio formado pelo elfo Legolas, pelo an&atilde;o Gimli e por Aragorn, herdeiro da realeza dos Homens, tenta resgatar os jovens hobbits Merry e Pippin, capturados por guerreiros-&oacute;rquicos. A busca pelos companheiros perdidos levar&aacute; os tr&ecirc;s a confrontar os cavaleiros do reino de Rohan e o mago renegado Saruman, que tamb&eacute;m deseja o Um Anel para si.
+      </p>
+      <p>
+       Autor(a): John Ronald Reuel Tolkien
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Tolkien/SA3.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       O Retorno Do Rei | O Senhor Dos An&eacute;is
+      </h3>
+      <p class="article-description">
+       Em O Retorno do Rei, acompanhamos o mago Gandalf e o hobbit Pippin em sua visita &agrave; a majestosa cidade de Minas Tirith, que j&aacute; foi o principal baluarte dos Homens contra a amea&ccedil;a de Sauron, mas que est&aacute; prestes a sucumbir diante da for&ccedil;a avassaladora do Senhor Sombrio. Outros membros da Sociedade do Anel se juntam a Aragorn, herdeiro da longa linhagem dos reis de Minas Tirith, na tentativa de evitar que a antiga capital do reino de Gondor seja destru&iacute;da.
+      </p>
+      <p>
+       Autor(a): John Ronald Reuel Tolkien
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Tolkien/H.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       O Hobbit
+      </h3>
+      <p class="article-description">
+       Bilbo Bolseiro era um dos mais respeit&aacute;veis hobbits de todo o Condado at&eacute; que, um dia, o mago Gandalf bate &agrave; sua porta. A partir de ent&atilde;o, toda sua vida pacata e campestre soprando an&eacute;is de fuma&ccedil;a com seu belo cachimbo come&ccedil;a a mudar. Ele &eacute; convocado a participar de uma aventura por ningu&eacute;m menos do que Thorin Escudo-de-Carvalho, um pr&iacute;ncipe do poderoso povo dos An&atilde;os.
+      </p>
+      <p>
+       Autor(a): John Ronald Reuel Tolkien
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Tolkien/SL.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       O Silmarillion
+      </h3>
+      <p class="article-description">
+       O Silmarillion &eacute; o relato dos Dias Antigos da Primeira Era do mundo criado por J.R.R. Tolkien. &Eacute; a hist&oacute;ria long&iacute;nqua para a qual os personagens de O Senhor dos An&eacute;is e O Hobbit olham para tr&aacute;s, e em cujos eventos alguns deles, como Elrond e Galadriel, tomaram parte. Os contos de O Silmarillion se passam na &eacute;poca em que Morgoth, o Primeiro Senhor Sombrio, habitava a Terra-m&eacute;dia, e os Altos-Elfos guerreavam contra ele pela recupera&ccedil;&atilde;o das Silmarils, as joias que continham a pura luz de Valinor. O livro come&ccedil;a com o "Ainulindal&euml;", o mito da cria&ccedil;&atilde;o do Universo, seguido pelo "Valaquenta", onde est&atilde;o descritas a natureza e os poderes de cada um dos deuses.
+      </p>
+      <p>
+       Autor(a): John Ronald Reuel Tolkien
+      </p>
+     </div>
+    </article>
+   </section>
+   <section class="destaque">
+    <h2 class="section-title">
+     Teologia
+    </h2>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Teologia/teologiareforma.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Teologia Da Reforma
+      </h3>
+      <p class="article-description">
+       H&aacute; 5 anos, a Igreja foi agitada por alguns personagens que propunham mudan&ccedil;as cruciais no cristianismo: os reformadores. Defendendo doutrinas como a justifica&ccedil;&atilde;o pela f&eacute;, a autoridade das Escrituras e a gra&ccedil;a de Deus na salva&ccedil;&atilde;o, eles enfrentaram as pr&aacute;ticas religiosas vigentes e desafiaram dogmas estabelecidos h&aacute; s&eacute;culos no que ficou conhecido como Reforma Protestante. Para compor Teologia da Reforma, Matthew Barrett reuniu um time de te&oacute;logos e historiadores para falar sobre as doutrinas ensinadas e defendidas pelos reformadores.
+      </p>
+      <p>
+       Autor(a): Matthew Barrett
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Teologia/todaescritura.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Toda Escritura &Eacute;
+      </h3>
+      <p class="article-description">
+       Em harmonia com a tradi&ccedil;&atilde;o evang&eacute;lica, Toda a Escritura &eacute;... serve de guia &uacute;til e descomplicado que nos leva a uma maior compreens&atilde;o de temas
+                        como inspira&ccedil;&atilde;o, canoniza&ccedil;&atilde;o, import&acirc;ncia e aplicabilidade da B&iacute;blia. Esta &eacute; uma obra indispens&aacute;vel a todo leitor comprometido com as Escrituras que deseja ampliar sua instru&ccedil;&atilde;o b&iacute;blica e, assim, fortalecer e amadurecer sua f&eacute;.
+      </p>
+      <p>
+       Autor(a): Michael F. Bird
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Teologia/basesdafe.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Bases Da F&eacute; Crist&atilde;
+      </h3>
+      <p class="article-description">
+       Neste livro, uma vers&atilde;o condensada do best-seller Teologia Sistem&aacute;tica de Grudem , voc&ecirc; aprender&aacute; mais sobre a B&iacute;blia, as caracter&iacute;sticas de Deus e o que significa ser criado &agrave; sua imagem e semelhan&ccedil;a, o prop&oacute;sito da Igreja e muito mais , adquirindo, assim, as bases necess&aacute;rias para fortalecer seu relacionamento com Deus e obter crescimento espiritual.
+      </p>
+      <p>
+       Autor(a): Wayne Grudem
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Teologia/cristianismopuro.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Cristianismo Puro E Simples
+      </h3>
+      <p class="article-description">
+       Na obra mais popular e acess&iacute;vel de seu legado, Lewis apresenta os principais elementos da cosmovis&atilde;o crist&atilde; e seus princ&iacute;pios b&aacute;sicos, gradativamente conduzindo o leitor a temas mais profundos e complexos, provocando reflex&atilde;o e debate. Nesta edi&ccedil;&atilde;o especial da cole&ccedil;&atilde;o C.S. Lewis, com capa dura e tradu&ccedil;&atilde;o de uma das maiores especialistas em Lewis do Brasil, voc&ecirc; vai encontrar as palavras que encorajaram e fortaleceram milhares de ouvintes em tempos de guerra &horbar; e ainda reverberam mais de 70 anos depois.
+      </p>
+      <p>
+       Autor(a): C.S Lewis
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Teologia/deusfalou.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       E Deus Falou Na L&iacute;ngua Dos Homens
+      </h3>
+      <p class="article-description">
+       E Deus falou na l&iacute;ngua dos homens: uma introdu&ccedil;&atilde;o &agrave; B&iacute;blia responde a essas perguntas convidando o leitor a fazer uma viagem no tempo e no espa&ccedil;o para desvendar &eacute;pocas e lugares nos quais os acontecimentos b&iacute;blicos ocorreram. &Eacute; uma hist&oacute;ria sobre os bastidores da Hist&oacute;ria, sobre os mecanismos humanos e divinos que trouxeram o milagre da Palavra para perto de cada um de n&oacute;s e fizeram a linguagem divina caber, em alguma parte, na compreens&atilde;o humana.
+      </p>
+      <p>
+       Autor(a): Paulo Won
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Teologia/deusnobanco.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Deus No Banco Dos R&eacute;us
+      </h3>
+      <p class="article-description">
+       Em Deus no banco dos r&eacute;us , mais um livro em edi&ccedil;&atilde;o de luxo e capa dura da cole&ccedil;&atilde;o C.S. Lewis , o autor se volta tanto para quest&otilde;es teol&oacute;gicas quanto para aquelas que Hooper chama de "semiteol&oacute;gicas" ou &eacute;ticas com percep&ccedil;&otilde;es e observa&ccedil;&otilde;es completa e profundamente crist&atilde;s. Valendo-se de diversas fontes, os ensaios foram projetados para atender a uma s&eacute;rie de necessidades e ilustrar as diferentes formas como somos capazes de ver a religi&atilde;o crist&atilde;. Eles v&atilde;o desde textos relativamente populares escritos para jornais at&eacute; defesas mais eruditas da f&eacute;.
+      </p>
+      <p>
+       Autor(a): C.S Lewis
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Teologia/noalvorecer.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       No Alvorecer Dos Deuses
+      </h3>
+      <p class="article-description">
+       QUAL A SUA RELIGI&Atilde;O?Muitos te&oacute;logos acreditam que a religi&atilde;o de algu&eacute;m &eacute; definida n&atilde;o apenas em esfor&ccedil;os de busca por um Deus pessoal, mas em qualquer busca por tudo aquilo que afeta nossos h&aacute;bitos e comportamentos morais. Isso significa que n&oacute;s podemos ter uma religi&atilde;o externa e consciente, mas tamb&eacute;m ter outras em nosso cora&ccedil;&atilde;o que s&atilde;o muito mais baseadas nas adora&ccedil;&otilde;es do nosso interior do que nas m&uacute;sicas que cantamos na igreja. &Eacute; assim que entramos no terreno pedregoso da idolatria, assunto que o pastor batista e professor de teologia Yago Martins aborda neste livro in&eacute;dito.
+      </p>
+      <p>
+       Autor(a): Yago Martins
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Teologia/umanocomcs.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Um Ano Com CS Lewis
+      </h3>
+      <p class="article-description">
+       C. S. Lewis &eacute; nosso guia confi&aacute;vel nesta preciosa colet&acirc;nea de leituras di&aacute;rias para 2013. Para celebrar a vida e o legado daquele que &eacute; um dos maiores pensadores crist&atilde;os do &uacute;ltimo s&eacute;culo, Ultimato faz o relan&ccedil;amento do seu Um Ano com C. S. Lewis, 50 anos ap&oacute;s a sua morte. As leituras di&aacute;rias encontradas em Um Ano com C. S. Lewis foram cuidadosamente selecionadas dos cl&aacute;ssicos: Cristianismo Puro e Simples, Cartas de Um Diabo a seu Aprendiz, O Grande Abismo, O Problema do Sofrimento e Milagre s, entre outros. A cada dia, percorremos um caminho de descobertas com um amigo ao nosso lado. Lewis reflete sobre temas como a descoberta da f&eacute;, a natureza do amor, o sofrimento, os milagres, a morte, entre outros.
+      </p>
+      <p>
+       Autor(a): C.S Lewis
+      </p>
+     </div>
+    </article>
+   </section>
+   <section class="destaque">
+    <h2 class="section-title">
+     Mang&aacute;s
+    </h2>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Mang&aacute;s/db.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Dragon Ball Super
+      </h3>
+      <p class="article-description">
+       Dragon Ball Super segue as aventuras do protagonista Goku e seus amigos, depois de derrotar Majin Boo e trazer paz para Terra mais uma vez. Goku encontra seres de longe mais poderosos e atinge o poder de um deus.
+      </p>
+      <p>
+       Autor(a): Akira Toriyama
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Mang&aacute;s/jjk.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Jujutsu Kaisen
+      </h3>
+      <p class="article-description">
+       Em Jujutsu Kaisen, a vida de um adolescente &eacute; virada de cabe&ccedil;a para baixo ap&oacute;s entrar em contato com um talism&atilde; amaldi&ccedil;oado. No conceituado anime, o adolescente Yuuji Itadori participa de um clube de ocultismo e acaba se envolvendo com um item perigoso, um dedo amaldi&ccedil;oado.
+      </p>
+      <p>
+       Autor(a): Gege Akutami
+      </p>
+     </div>
+    </article>
+    <article class="article">
+     <img alt="Livro em destaque" class="article-img" height="160" src="/static/img/Mang&aacute;s/dn.jpg"/>
+     <div class="article-content">
+      <h3 class="article-title">
+       Death Note
+      </h3>
+      <p class="article-description">
+       O jovem estudante Light Yagami achar um caderno com poderes sobrenaturais, chamado Death Note, no qual era poss&iacute;vel matar uma pessoa apenas escrevendo seu nome no caderno. Quando o descobre, Light tenta eliminar todos os criminosos do mundo e dar &agrave; sociedade um mundo livre do mal.
+      </p>
+      <p>
+       Autor(a): Tsugumi Ohba
+      </p>
+     </div>
+    </article>
+   </section>
+   {% block content %}{% endblock %}
+  </main>
+  <footer>
+   <p>
+    &copy; 2024 Biblioteca. Todos os direitos reservados.
+   </p>
+  </footer>
+ </body>
+</html>
