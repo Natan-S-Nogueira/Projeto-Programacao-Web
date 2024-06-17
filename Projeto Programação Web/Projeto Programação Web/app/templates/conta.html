@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta - Biblioteca</title>
+    <link rel="stylesheet" href="/static/css/conta.css">
+     
+</head>
+<body>
+    <header>
+        <h1>Biblioteca</a></h1>
+        <!--Menu do site-->
+        <nav> <!--Listagem de páginas do menu-->
+            <ul>
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/livros" class="nav-link">Livros</a></li>
+                <li class="nav-item"><a href="/autores" class="nav-link">Autores</a></li>
+                <li class="nav-item"><a href="/cadastro" class="nav-link">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="user-profile">
+            <img src="/static/img/FotoUsuario/" alt="Foto do Usuário" height="160">
+            <h2>Nome: {{Nome}}</h2>
+        </div>
+        <h2>Livros Favoritos</h2>
+        <div class="favorite-books">
+            <div class="favorite-book-item">
+                <img src="/static/img/" alt="Livro 1" height="160">
+                <div class="book-details">
+                    <h3>Nome do Livro: {{ NomeLivro }}</h3>
+                    <p>Autor do Livro: {{ Autor}}</p>
+                </div>
+            </div>
+            <div class="favorite-book-item">
+                <img src="/static/img/" alt="Livro 2" height="160">
+                <div class="book-details">
+                    <h3>Nome do Livro: {{ NomeLivro }}</h3>
+                    <p>Autor do Livro:  {{ Autor}}</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Biblioteca. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

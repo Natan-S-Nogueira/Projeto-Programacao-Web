@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Biblioteca</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Biblioteca</h1>
+        <!--Menu do site-->
+        <nav> <!--Listagem de páginas do menu-->
+            <ul>
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/livros" class="nav-link">Livros</a></li>
+                <li class="nav-item"><a href="/autores" class="nav-link">Autores</a></li>
+                <li class="nav-item"><a href="/cadastro" class="nav-link">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Login-->
+    <main>
+        <h2>Login</h2>
+        <form id="formulario-login" method="post" action="/login/enviar">
+            <label for="email">Email:</label><br> <!--Nome da caixa de texto-->
+            <input type="text" id="email" name="email" placeholder="E-mail"><br> <!--Input da caixa de texto-->
+            <label for="password">Senha:</label><br> <!--Nome da caixa de texto-->
+            <input type="password" id="senha" name="senha" placeholder="Senha"><br><br> <!--Input da caixa de texto-->
+
+            <!--Revisar este botão, não está funcionando-->
+            <input type="submit" value="Login"> <!--Botão de registrar-->
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Biblioteca. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
