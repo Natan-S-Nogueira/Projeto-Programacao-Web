@@ -1,0 +1,86 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o cabeçalho */
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+}
+
+.header-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-item {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilos para o conteúdo principal */
+.main {
+    padding: 2rem;
+}
+
+.destaque {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.article {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.article-img {
+    margin-right: 1rem;
+}
+
+.article-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-description {
+    margin-bottom: 1rem;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-text {
+    margin-bottom: 0;
+}
