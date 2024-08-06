@@ -1,9 +1,3 @@
-Projeto Final Programação Web
-
-Tema do Projeto: Biblioteca
-
-Alunos: Lucas Coelho e Natan Nogueira
-
 Bibliotecas utilziadas:
 
     FastAPI         - pip install fastapi
@@ -27,7 +21,7 @@ Extensões:
 
 Funcionamento do Sistema (Backend):
 
-    O nosso projeto se baseia no uso de Python (Bibliotecas: FastAPI e SQLAlchemy) e HTML+CSS para a criação de um site de uma biblioteca qualquer, onde o acervo foi baseado em alguns livros que um dos participantes do grupo (Natan) tem em casa.
+    O nosso projeto se baseia no uso de Python (Bibliotecas: FastAPI e SQLAlchemy) e HTML+CSS para a criação de um site de uma biblioteca qualquer.
 
     O uso de FastAPI para a criação de métodos GET e POST foi essencial para o andamento do projeto. Aqui está um exemplo de API utilizada no sistema:
 
@@ -105,10 +99,3 @@ Apresentação do Sistema (Frontend):
 Para a execução do sistema basta executar os arquivos: create.bd + models.py + database.py e, por último, main.py (nesta ordem).
 
 Talvez quando o arquivo database.py for aberto ele apresente 2 erros de importação no código referentes à biblioteca Flask mas estes erros podem ser ignorados pois não interferem em nada na execução do código.
-
-
-Responsabilidades de cada membro da dupla:
-
-    Lucas Coelho: criação do banco de dados + endpoints de cadastro e login
-
-    Natan Nogueira: criação do frontend + criação dos endpoints.
